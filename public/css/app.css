@@ -1,0 +1,155 @@
+/* Style dla SM */
+@media (min-width: 576px) {
+
+    .border-sm-end {
+        border-right: 1px solid #dee2e6 !important;
+    }
+
+}
+
+/* Style dla MD */
+@media (min-width: 768px) {
+    .border-md-none {
+        border-right: none !important;
+    }
+
+    .border-md-end {
+        border-right: 1px solid #dee2e6 !important;
+    }
+}
+
+/* Style dla LG */
+@media (min-width: 992px) {
+    /* .stala-wysokosc-bloku {
+    height: 330px;
+  } */
+
+  .border-lg-end {
+    border-right: 1px solid #dee2e6 !important;
+}
+
+}
+
+/* Style dla XL */
+@media (min-width: 1200px) {}
+
+/* Style dla XXL */
+@media (min-width: 1400px) {
+
+    .border-xxl-end {
+        border-right: 1px solid #dee2e6 !important;
+    }
+}
+
+/* Górny pasek nawigacji */
+.navbar {
+    font-size: 1.2rem;
+}
+
+.navbar-brand span {
+    color: #242424;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+}
+
+/* Dolny pasek nawigacji */
+
+.navbar.dolny .nav-link, #pasek_cen a.nav-link {
+    color: #5a5a5a;
+    font-size: 1rem;
+}
+
+.navbar.dolny .nav-link.active {
+    color: #5a5a5a;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.navbar.dolny .nav-link:hover, #pasek_cen a.nav-link:hover {
+    color: #222;
+    font-size: 1rem;
+}
+
+/* Ciało strony */
+
+body {
+    font-size: 1rem;
+    font-family: "Trebuchet MS", Verdana, Arial;
+    overflow: auto;
+}
+
+.toast {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.fa-input {
+    font-family: FontAwesome, ‘Helvetica Neue’, Helvetica, Arial, sans-serif;
+}
+
+.niebieskie-tlo {
+    background-color: #008bb9;
+}
+
+.lekko-niebieskie-tlo,
+.lekko-niebieskie-tlo:focus {
+    background-color: #cbecfa;
+}
+
+.bezowe-tlo {
+    background-color: #e3e3e3;
+}
+
+/* Pasek z ceną BTC, wolumenem, saldem... */
+#pasek_cen {
+    font-size: 1rem;
+    color: #5a5a5a;
+}
+
+#pasek_cen div {
+    border: none;
+}
+
+/* Tabela z ofertami kupna i sprzedaży */
+
+.table thead>tr>th {
+    border-bottom-color: #dee2e6 !important;
+}
+
+thead th {
+    font-weight: normal;
+}
+
+.stala-wysokosc-tabeli {
+    overflow-y: auto;
+    height: 253px;
+}
+
+.przyklejony-naglowek-tabeli {
+    position: sticky;
+    top: 0;
+}
+
+.kursorLapki {
+    cursor: pointer;
+}
+
+.table> :not(:first-child) {
+    border-top-color: #dee2e6;
+}
+
+/* Rozwijany pasek */
+
+.dropdown-menu a {
+    color: #5a5a5a;
+}
+
+.dropdown-menu a:hover {
+    color: black;
+    background-color: #cbecfa;
+}
