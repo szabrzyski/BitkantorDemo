@@ -29,48 +29,6 @@ class TestController extends Controller
     public function test(Request $request, User $uzytkownik)
     {
 
- 
-
-
-        $a = number_format(0.000000010,8);
-        $b = 0.000000010;
- 
-      //  dd($a);
-
-    //     $ostatnioWykryteWplatyBtc = WplataBtc::with("transakcjaBlockchain")->latest()->limit(1000)->get();
-
-    //    // dd($ostatnioWykryteWplatyBtc);
-      
-
-    //     $czyWplataJestJuzWSystemie = $ostatnioWykryteWplatyBtc->contains(function ($wartosc, $klucz) {
-    //         //  $klucz === "" && $wartosc === "";
-    //         return $wartosc->adres_portfela_odbiorcy === "tb1qq26dvkf9nnxfs3hw0n78ld6nxduf8y7almus6ux" && $wartosc->transakcjaBlockchain->txid == "5286e3847b0d6f6e438791f2a6e7af8fca86606b9c1b5a43d2a34c4785b4b682";
-    //     });
-
-        // dd($czyWplataJestJuzWSystemie);
-        // $uzytkownik2 = User::where('id',$request->user()->id)->lockForUpdate()->firstOrFail();
-        // dd($uzytkownik2);
-    
-    //     $bitcoinApi = new BitcoinApi();
-    //     // $odpowiedzBitcoinApi = $bitcoinApi->wykonajZapytanie("getnewaddress",["address_type" => "bech32"]);
-    //    // $test = $bitcoinApi->listaTransakcji();
-    //     // dd($test[0]["txids"]);
-    //     $test = $bitcoinApi->informacjeOTransakcji("cd6f99b76428c8c8525135fddf1e18380378113a944c5cf52cd9c851eecc55c8");
-    //   //$test = $bitcoinApi->listaOstatnichTransakcji();
-    //     dd($test);
-    //     // $odpowiedzBitcoinApi = $bitcoinApi->wykonajZapytanie("listreceivedbyaddress",["address_filter" => "tb1qsdg0m94zw0qt3xv6w4dnjdltflawegwje6rge3"]);
-    //     $odpowiedzBitcoinApi = $bitcoinApi->wykonajZapytanie("listtransactions", []);
-    //     // $odpowiedzBitcoinApi = $bitcoinApi->wykonajZapytanie("createwallet",["wallet_name" => "bitkantortestnet"]);
-    //     if ($odpowiedzBitcoinApi) {
-    //         dd($odpowiedzBitcoinApi);
-    //     } else {
-    //         dd("nie ok");
-    //     }
-
-        // return view('test');
-
-
-
         $uzytkownik = $request->user()->load('wplatyPln', 'wyplatyPln');
 
         $wplatyPlnUzytkownika = $uzytkownik->wplatyPln->toArray();
@@ -135,15 +93,6 @@ class TestController extends Controller
     public function test2(Request $request, User $uzytkownik)
     {
 
-
-
-        $uzytkownik2 = User::where('id',1)->first();
-        dd($uzytkownik2);
-
-
-        $a = 100;
-        $b = null;
-        dd($a-$b);
         $bitcoinApi = new BitcoinApi();
         // $odpowiedzBitcoinApi = $bitcoinApi->wykonajZapytanie("getnewaddress",["address_type" => "bech32"]);
         $test = $bitcoinApi->listaTransakcji();
